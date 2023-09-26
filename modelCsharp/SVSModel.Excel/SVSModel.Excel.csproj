@@ -5,9 +5,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Include="..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="ExcelDna.AddIn" Version="1.7.0-rc1" />
-		<PackageReference Include="GenericParser" Version="1.1.6" />
-		<PackageReference Include="Microsoft.Data.Analysis" Version="0.20.0" />
 	</ItemGroup>
 
 	<ItemGroup>

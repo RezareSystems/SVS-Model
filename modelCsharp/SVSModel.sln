@@ -6,6 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVSModel", "SVSModel\SVSModel.csproj", "{255D77C7-5338-42BC-A136-8801657D51BB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVSModel.Excel", "SVSModel.Excel\SVSModel.Excel.csproj", "{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}"
+	ProjectSection(ProjectDependencies) = postProject
+		{255D77C7-5338-42BC-A136-8801657D51BB} = {255D77C7-5338-42BC-A136-8801657D51BB}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsSVS-test", "WinFormsSVS-test\WinFormsSVS-test.csproj", "{7DD24577-0C84-42E1-B10C-551BB92A718A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestModel", "TestModel\TestModel\TestModel.csproj", "{B98654E6-CEB9-4418-ACC8-DFC06055081B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,14 @@ Global
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
