@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -145,7 +144,6 @@ namespace SVSModel
             DateTime[] cropDates = Functions.DateSeries(config.EstablishDate, config.HarvestDate);
             Dictionary<DateTime, double> tt = Functions.dictMaker(cropDates, Tt);
             Dictionary<DateTime, double> AccTt = Functions.AccumulateTt(cropDates, tt);
-            Trace.WriteLine("I have made it ");
             return Crop.Grow(AccTt, config);
         }
     }

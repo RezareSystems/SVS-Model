@@ -39,7 +39,7 @@ namespace TestModel
             Console.ReadLine();
 
         }
-        public static void Main(Dictionary<string, object> _configDict)
+        public static void RunTests(Dictionary<string, object> _configDict)
 
         {
             
