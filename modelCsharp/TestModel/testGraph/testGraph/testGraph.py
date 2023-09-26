@@ -48,10 +48,20 @@ for t in tests:
             ret = True
         datefilter.append(ret)
         
-    color = colors[pos-1]
-    Graph.add_subplot(2,2,pos)
+    color = 'b'
+    Graph.add_subplot(3,2,pos)
     Data = AllData.loc[:,(t,'SoilMineralN')].sort_index()
-    plt.xticks(rotation = 45)
+    plt.xticks(rotation = 45)    
+    plt.title("SoilMineralN")
+    makeplot(Data,color)
+    make_observed(observed_data[datefilter])
+    Graph.tight_layout(pad=1.5)
+    pos+=1
+    
+    Graph.add_subplot(3,2,pos)
+    plt.xticks(rotation = 45)  
+    plt.title("CropN")
+    Data = AllData.loc[:,(t,'CropN')].sort_index()
     makeplot(Data,color)
     make_observed(observed_data[datefilter])
     pos+=1
