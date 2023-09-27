@@ -19,6 +19,8 @@ using System.Collections.Generic;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using Microsoft.Scripting;
+using static IronPython.Modules._ast;
+using System.IO;
 
 namespace TestModel
 {
@@ -26,8 +28,10 @@ namespace TestModel
     {
         private static void runPythonScript()
         {
-            ////just checking
-            string progToRun = @"C:\Users\1989s\source\repos\SVS\modelCsharp\TestModel\testGraph\testGraph\testGraph.py";          
+            string dir = Directory.GetCurrentDirectory();
+            string newPath = Path.GetFullPath(Path.Combine(dir, @"..\..\..\..\"));
+            string progToRun = newPath+ @"TestModel\testGraph\testGraph\testGraph.py";    
+            
             Process proc = new Process();
             proc.StartInfo.FileName = "python.exe";
             proc.StartInfo.RedirectStandardOutput = true;
@@ -42,7 +46,7 @@ namespace TestModel
         public static void RunTests(Dictionary<string, object> _configDict)
 
         {
-            
+            string dir = Directory.GetCurrentDirectory();
             //DataFrame testConfigs = Crop.LoadCoefficients("SVSModel.Data.TestConfig.csv");
 
             string resourceName = "TestModel.TestConfig.csv";
@@ -97,9 +101,9 @@ namespace TestModel
                         nextRow.Add(new KeyValuePair<string, object>(OutPutHeaders[c], output[r, c]));
                     }
                     newDataframe.Append(nextRow, true);
-                }               
+                }
 
-                DataFrame.SaveCsv(newDataframe, @"C:\Users\1989s\source\repos\svs\modelCsharp\TestModel\testGraph\OutputFiles\" + test + ".csv");
+                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");               
 
             }
             runPythonScript();

@@ -1,10 +1,13 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime as dt
 import numpy as np
 
-data = pd.read_csv(r"C:\Users\1989s\source\repos\svs\modelCsharp\TestModel\testGraph\OutputFiles\test 1.csv",index_col=0)
-observed_data = pd.read_csv(r"C:\Users\1989s\source\repos\svs\modelCsharp\TestModel\testGraph\OutputFiles\observed.csv",index_col=0)
+path = os.getcwd()
+
+data = pd.read_csv(path + r"\OutputFiles\test 1.csv",index_col=0)
+observed_data = pd.read_csv(path +r"\OutputFiles\observed.csv",index_col=0)
 
 observed_data.sort_index(axis=0,inplace=True)
 
@@ -12,7 +15,7 @@ tests = ['test 1','test 2','test 3']
 
 Alltests =[]
 for t in tests[:]:
-    Alltests.append(pd.read_csv(r"C:/Users/1989s/source/repos/svs/modelCsharp/TestModel/testGraph/OutputFiles/"+t+".csv",index_col=0))
+    Alltests.append(pd.read_csv( path + "\\OutputFiles\\"+t+".csv",index_col=0))
     
 AllData = pd.concat(Alltests,axis=1,keys=tests)
 AllData.index = pd.to_datetime(AllData.index,format = "%d/%m/%Y %H:%M:%S %p")
