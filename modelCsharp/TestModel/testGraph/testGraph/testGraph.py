@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import datetime as dt
 import numpy as np
 
+import glob
+
+
 path = os.getcwd()
 
 data = pd.read_csv(path + r"\OutputFiles\test 1.csv",index_col=0)
@@ -12,6 +15,14 @@ observed_data = pd.read_csv(path +r"\OutputFiles\observed.csv",index_col=0)
 observed_data.sort_index(axis=0,inplace=True)
 
 tests = ['test 1','test 2','test 3']
+
+#tests = []
+
+#fullpath =path + r"\\OutputFiles\\"
+
+#for file in os.listdir(fullpath):
+  #  if file.endswith(".csv") and file.startswith("test"):
+    #    tests.append(file)
 
 Alltests =[]
 for t in tests[:]:
