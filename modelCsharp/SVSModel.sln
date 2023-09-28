@@ -10,9 +10,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVSModel.Excel", "SVSModel.
 		{255D77C7-5338-42BC-A136-8801657D51BB} = {255D77C7-5338-42BC-A136-8801657D51BB}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsSVS-test", "WinFormsSVS-test\WinFormsSVS-test.csproj", "{7DD24577-0C84-42E1-B10C-551BB92A718A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestModel", "TestModel\TestModel\TestModel.csproj", "{B98654E6-CEB9-4418-ACC8-DFC06055081B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppSVS-test", "ConsoleAppSVS-test\ConsoleAppSVS-test.csproj", "{9C1F1537-6CE7-4C6E-8B89-CD9276C3F6D6}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "testGraph", "TestModel\testGraph\testGraph\testGraph.pyproj", "{4311625B-8B0C-45C1-B2C3-C7CFC084E381}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,14 +30,16 @@ Global
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30EFA8DB-CE6D-4B36-9EBC-0A0B2CD7A444}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DD24577-0C84-42E1-B10C-551BB92A718A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B98654E6-CEB9-4418-ACC8-DFC06055081B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1F1537-6CE7-4C6E-8B89-CD9276C3F6D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1F1537-6CE7-4C6E-8B89-CD9276C3F6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1F1537-6CE7-4C6E-8B89-CD9276C3F6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1F1537-6CE7-4C6E-8B89-CD9276C3F6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4311625B-8B0C-45C1-B2C3-C7CFC084E381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4311625B-8B0C-45C1-B2C3-C7CFC084E381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

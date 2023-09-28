@@ -1,20 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>WinFormsSVS_test</RootNamespace>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-	<EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ConsoleAppSVS_test</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SVSModel\SVSModel.csproj" />
     <ProjectReference Include="..\TestModel\TestModel\TestModel.csproj" />
   </ItemGroup>
-
-   
 
 </Project>
