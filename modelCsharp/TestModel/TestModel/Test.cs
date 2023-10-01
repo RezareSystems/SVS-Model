@@ -47,8 +47,6 @@ namespace TestModel
 
         {
             string dir = Directory.GetCurrentDirectory();
-            //DataFrame testConfigs = Crop.LoadCoefficients("SVSModel.Data.TestConfig.csv");
-
             string resourceName = "TestModel.TestConfig.csv";
             var assembly = Assembly.GetExecutingAssembly();
             Stream csv = assembly.GetManifestResourceStream(resourceName);
@@ -102,6 +100,12 @@ namespace TestModel
                     }
                     newDataframe.Append(nextRow, true);
                 }
+
+
+                // OUTPUT FLDER DOES EXIST YET!!!   
+                //if not os.path.exists(outdir):
+                //os.mkdir(outdir)
+
 
                 DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");               
 

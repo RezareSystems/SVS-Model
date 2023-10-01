@@ -79,5 +79,6 @@ for t in tests:
     makeplot(Data,color)
     make_observed(observed_data[datefilter])
     pos+=1
-
+    
+plt.savefig(path+'my_plot.png')
 plt.show()
