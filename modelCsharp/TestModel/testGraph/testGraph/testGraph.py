@@ -6,30 +6,31 @@ import numpy as np
 
 import glob
 
-
 path = os.getcwd()
 
-data = pd.read_csv(path + r"\OutputFiles\test 1.csv",index_col=0)
-observed_data = pd.read_csv(path +r"\OutputFiles\observed.csv",index_col=0)
+#this one is a new wit James
+#observed_path = os.path.join("../TestModel/Observed/observed.csv")
+
+#run it on machine
+#observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
+
+#run this code for an action
+observed_path = "TestModel/Observed/observed.csv"
+
+observed_data = pd.read_csv(observed_path,index_col=0)
 
 observed_data.sort_index(axis=0,inplace=True)
 
 tests = ['test 1','test 2','test 3']
 
-#tests = []
-
-#fullpath =path + r"\\OutputFiles\\"
-
-#for file in os.listdir(fullpath):
-  #  if file.endswith(".csv") and file.startswith("test"):
-    #    tests.append(file)
-
 Alltests =[]
-for t in tests[:]:
-    Alltests.append(pd.read_csv( path + "\\OutputFiles\\"+t+".csv",index_col=0))
+for t in tests[:]:  
+   
+    testframe = pd.read_csv(path + "\\OutputFiles\\"+t+".csv",index_col=0,dayfirst=True,date_format='%d/%m/%Y %H:%M:%S %p')  
     
+    Alltests.append(testframe)   
+
 AllData = pd.concat(Alltests,axis=1,keys=tests)
-AllData.index = pd.to_datetime(AllData.index,format = "%d/%m/%Y %H:%M:%S %p")
 
 observed_data.index=pd.to_datetime(observed_data.index,format="%d/%m/%Y %H:%M")
 
@@ -79,6 +80,6 @@ for t in tests:
     makeplot(Data,color)
     make_observed(observed_data[datefilter])
     pos+=1
-    
-plt.savefig(path+'my_plot.png')
+
+plt.savefig('testplot.png')
 plt.show()
