@@ -2,14 +2,8 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime as dt
-import numpy as np
-
-import glob
 
 path = os.getcwd()
-
-#this one is a new wit James
-#observed_path = os.path.join("../TestModel/Observed/observed.csv")
 
 #run it on machine
 #observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
@@ -21,6 +15,7 @@ observed_data = pd.read_csv(observed_path,index_col=0)
 
 observed_data.sort_index(axis=0,inplace=True)
 
+#fix is required
 tests = ['test 1','test 2','test 3']
 
 Alltests =[]
