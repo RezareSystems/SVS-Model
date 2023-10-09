@@ -12,7 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./app
+    
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -42,11 +45,12 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: dotnet build --no-restore           
       
     - name: run
-      run: dotnet run --project ConsoleApp1/ConsoleApp1.csproj
+      run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
       
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py     
