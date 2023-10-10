@@ -24,27 +24,16 @@ namespace TestModel
 {
     public class Test
     {
-        /*private static void runPythonScript()
+/*        private static void runPythonScript()
         {
+            //that is new with james
+            //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
             string dir = Directory.GetCurrentDirectory();
-            //legacy below
             string newPath = Path.GetFullPath(Path.Combine(dir, @"..\..\..\..\"));
             string progToRun = newPath + @"TestModel\testGraph\testGraph\testGraph.py";
 
-            //that is new with james
-            //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
-
-            // run this code for an action
-            //string progToRun = @"TestModel/testGraph/testGraph/testGraph.py";
-
             Process proc = new Process();
-
-            // for ubuntu action
-            //proc.StartInfo.FileName = @"TestModel/testGraph/testGraph/testEnvironment/Scripts/python.exe";
-
-            // original  file 
             proc.StartInfo.FileName = "python.exe";
-
             proc.StartInfo.RedirectStandardOutput = true;
             proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.Arguments = progToRun;
@@ -121,7 +110,7 @@ namespace TestModel
 
             }
             // uncomment it if run is on local machine
-            //runPythonScript();
+            runPythonScript();
 
         }      
 
