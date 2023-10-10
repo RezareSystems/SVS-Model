@@ -24,7 +24,7 @@ namespace TestModel
 {
     public class Test
     {
-/*        private static void runPythonScript()
+/**        private static void runPythonScript()
         {
             //that is new with james
             //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
@@ -41,7 +41,7 @@ namespace TestModel
             StreamReader sReader = proc.StandardOutput;
             proc.WaitForExit();
             Console.ReadLine();
-        }*/
+        }**/
         public static void RunTests(Dictionary<string, object> _configDict)
 
         {
