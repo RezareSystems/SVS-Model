@@ -110,7 +110,7 @@ namespace TestModel
 
             }
             // uncomment it if run is on local machine
-            runPythonScript();
+            //runPythonScript();
 
         }      
 
