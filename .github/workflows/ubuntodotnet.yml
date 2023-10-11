@@ -12,9 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # defaults:
-      # run:
-        # working-directory: ./modelCsharp
+    defaults:
+      run:
+        working-directory: ./modelCsharp
     
     steps:
     - uses: actions/checkout@v3
