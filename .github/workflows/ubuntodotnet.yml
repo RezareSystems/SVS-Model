@@ -56,7 +56,13 @@ jobs:
       run: python TestModel/testGraph/testGraph/testGraph.py     
       
     - name: send a graph 
-      run:  mail -s "Graph" -A testplot.png super.kydryavuy2011@yandex.ru  
+      run:  mail -s "Graph" -A testplot.png super.kydryavuy2011@yandex.ru
+      
+    # - name: HTML Preview
+      # id: html_preview
+      # uses: pavi2410/html-preview-action@v2
+      # with:
+        # html_file: 'index.html'      
       
  
       
