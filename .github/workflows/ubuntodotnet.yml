@@ -72,7 +72,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with: 
         name: folder for graphs
-        path: graphs
+        path: ./modelCsharp/graphs
       
       
       
