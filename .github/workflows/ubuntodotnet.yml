@@ -66,7 +66,7 @@ jobs:
         mv testplot.png graphs
 
     - name: list a folder 
-      run:  ls
+      run:  ls graphs
       
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
