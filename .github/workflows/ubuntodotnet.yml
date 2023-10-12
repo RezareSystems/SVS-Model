@@ -27,7 +27,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.11.5  
-                       
+                          
     - name: Install Python pandas
       run: python -m pip install --upgrade pip pandas
       
@@ -41,8 +41,11 @@ jobs:
       run: python -m pip install --upgrade pip datetime
 
     - name: Install Python datetime
-      run: pip install pyinstaller   
-
+      run: pip install pyinstaller
+      
+    - name: Create a temporary artifact downloads folder for graphs
+      run: mkdir graphs
+      
     - name: Restore dependencies
       run: dotnet restore
       
@@ -58,13 +61,15 @@ jobs:
     - name: send a graph 
       run:  mail -s "Graph" -A testplot.png super.kydryavuy2011@yandex.ru
       
-    # - name: HTML Preview
-      # id: html_preview
-      # uses: pavi2410/html-preview-action@v2
-      # with:
-        # html_file: 'index.html'      
-      
- 
+    - name: moving artfact to temp folder
+      run: |
+        mv testplot.png graphs         
+           
+    - name: Step 3 - Use the Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v2
+      with: 
+        name: folder for graphs
+        path: graphs
       
       
       
