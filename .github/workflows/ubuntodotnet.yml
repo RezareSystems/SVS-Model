@@ -63,8 +63,11 @@ jobs:
       
     - name: moving artfact to temp folder
       run: |
-        mv testplot.png graphs         
-           
+        mv testplot.png graphs
+
+    - name: list a folder 
+      run:  ls
+      
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
