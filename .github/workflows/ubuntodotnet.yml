@@ -30,6 +30,9 @@ jobs:
                           
     - name: Install Python pandas
       run: python -m pip install --upgrade pip pandas
+
+    - name: Create a temporary artifact downloads folder for graphs
+      run: mkdir graphs
       
     - name: Install Python matplotlib
       run: python -m pip install --upgrade pip matplotlib  
@@ -42,9 +45,6 @@ jobs:
 
     - name: Install Python datetime
       run: pip install pyinstaller
-      
-    - name: Create a temporary artifact downloads folder for graphs
-      run: mkdir graphs
       
     - name: Restore dependencies
       run: dotnet restore
