@@ -13,8 +13,9 @@ jobs:
   build:
   
     permissions:
-      pages: write      
-      id-token: write     
+      contents: read
+      pages: write
+      id-token: write   
       
     environment:
       name: github-pages
