@@ -86,7 +86,7 @@ jobs:
         
     - name: Override page_url
       id: change-page-url
-      run: echo "new_page_url=${{ steps.deployment.outputs.page_url }}index.html" >> $GITHUB_OUTPUT # redirect to our folder 
+      run: echo "new_page_url=${{ steps.deployment.outputs.page_url }}index.html" >> $GITHUB_OUTPUT 
     
     - name: find index file
       run: find . -type f -name "*.html"       
