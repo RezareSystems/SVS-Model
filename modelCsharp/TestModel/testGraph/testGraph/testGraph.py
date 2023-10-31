@@ -2,14 +2,15 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import datetime as dt
+import aspose.words as aw
 
 path = os.getcwd()
 
 #run it on machine
-#observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
+observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
 
 #run this code for an action
-observed_path = "TestModel/Observed/observed.csv"
+#observed_path = "TestModel/Observed/observed.csv"
 
 observed_data = pd.read_csv(observed_path,index_col=0)
 
@@ -77,4 +78,10 @@ for t in tests:
     pos+=1
 
 plt.savefig('testplot.png')
+
+doc = aw.Document()
+builder = aw.DocumentBuilder(doc)
+builder.insert_image("testplot.png")
+doc.save("index.html")
+
 plt.show()
