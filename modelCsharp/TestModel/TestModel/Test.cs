@@ -19,12 +19,18 @@ using Microsoft.Scripting;
 using static IronPython.Modules._ast;
 using System.IO;
 using CommandLine;
+using static IronPython.Modules.PythonDateTime;
+using System.Text.RegularExpressions;
+using System.Net.Http.Json;
+using Microsoft.VisualBasic;
+using static IronPython.SQLite.PythonSQLite;
+
 
 namespace TestModel
 {
     public class Test
     {
-/*        private static void runPythonScript()
+        private static void runPythonScript()
         {
             //that is new with james
             //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
@@ -41,15 +47,26 @@ namespace TestModel
             StreamReader sReader = proc.StandardOutput;
             proc.WaitForExit();
             Console.ReadLine();
-        }*/
+        }
         public static void RunTests(Dictionary<string, object> _configDict)
 
         {
             string dir = Directory.GetCurrentDirectory();
-            string resourceName = "TestModel.TestConfig.csv";
+            string resourceName = "TestModel.actualDataConfig.csv";
+
+            // new line
+            string resourceFertiliser = "TestModel.FertiliserData.csv";
+
             var assembly = Assembly.GetExecutingAssembly();
             Stream csv = assembly.GetManifestResourceStream(resourceName);
+
+            //new line
+            Stream csvFertiliser = assembly.GetManifestResourceStream(resourceFertiliser);
+
             DataFrame allTests = DataFrame.LoadCsv(csv);
+
+            //new line
+            DataFrame fertiliser = DataFrame.LoadCsv(csvFertiliser);
 
             List<string> Tests = new List<string>();
 
@@ -66,6 +83,40 @@ namespace TestModel
 
                 Dictionary<DateTime, double> testResults = new Dictionary<DateTime, double>();
                 Dictionary<DateTime, double> nApplied = new Dictionary<DateTime, double>();
+               
+                int siteNumber = Int32.Parse(Regex.Match(test, @"\d+").Value);
+
+                foreach (DataFrameRow row in fertiliser.Rows)
+                {
+
+                    int firstElement = Int32.Parse(row[0].ToString());
+                    
+                    DateTime fertDate = Convert.ToDateTime(row[1].ToString());
+
+                    if (firstElement == siteNumber)
+
+                        if ((fertDate > _config.Current.EstablishDate) && (fertDate <= _config.Current.HarvestDate))
+
+                            try
+                            {
+
+                                if (!nApplied.ContainsKey((DateTime)row[1]))
+                                { 
+                                    nApplied.Add(fertDate, (Single)row[2]);                              
+                                }
+                                else
+                                {
+                                    nApplied[fertDate]+= (Single)row[2];
+                                }
+                                
+                            }
+                            
+                            catch (Exception e)
+                            {
+                                Trace.WriteLine(e+"something is not working properly in fertiliser department");
+
+                            }
+                }
 
                 string weatherStation = allTests["WeatherStation"][testRow].ToString();
              
@@ -101,19 +152,23 @@ namespace TestModel
                 }
                 string folderName = "OutputFiles";
 
-                if (!Directory.Exists(folderName))
+                string fertiliserFolder = "NitrogenApplied";
+
+                if (!Directory.Exists(folderName) && !Directory.Exists(fertiliserFolder))
                 {
                     System.IO.Directory.CreateDirectory("OutputFiles");
+                    System.IO.Directory.CreateDirectory("NitrogenApplied");
                 }
 
-                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");               
+                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+                //DataFrame.SaveCsv(newDataframe, dir + "\\NitrogenApplied\\" + test + ".csv");
+                             
 
             }
             // uncomment it if run is on local machine
-            //runPythonScript();
+            runPythonScript();
 
         }      
-
         public static SVSModel.Configuration.Config SetConfigFromDataFrame(string test, DataFrame allTests)
         {
             int testRow = getTestRow(test, allTests);
@@ -188,7 +243,6 @@ namespace TestModel
 
             return ret;
         }
-
         private static int getTestRow(string test, DataFrame allTests)
         {
             int testRow = 0;
