@@ -10,7 +10,6 @@ path = os.getcwd()
 #run it on machine
 #observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
 
-
 #run this code for an action
 observed_path = "TestModel/Observed/observed.csv"
 

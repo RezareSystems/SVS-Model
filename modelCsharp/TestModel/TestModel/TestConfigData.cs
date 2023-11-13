@@ -9,12 +9,6 @@ using System.Threading.Tasks;
 
 namespace TestModel
 {
-
-
-
-
-
-
     public class TestConfigData
     {
 
