@@ -62,27 +62,16 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore
-      
-    - name: find CSV file
-      run: find . -type f -name "*.csv"       
-
-    - name: root directory
-      run: ls
-
-    - name: root directory
-      run: ls ConsoleAppSVS-test/bin/Debug/net6.0
-   
+         
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
 
-    - name: find CSV file
-      run: find . -type f -name "*.csv" 
-      
-    - name: directory with csv?
-      run: ls ConsoleAppSVS-test/bin/Debug/net6.0
-
     - name: root directory
-      run: ls
+      run: ls/OutputFiles
+
+    - name: find CSV file
+      run: find . -type f -name "*.csv"       
+      
      
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py

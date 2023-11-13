@@ -163,11 +163,6 @@ namespace TestModel
 
                 DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
 
-                string fullPath = Path.GetFullPath(dir);
-                Trace.WriteLine(fullPath);
-                //DataFrame.SaveCsv(newDataframe, dir + "\\NitrogenApplied\\" + test + ".csv");
-
-
             }
             // uncomment it if run is on local machine
             //runPythonScript();
