@@ -67,12 +67,11 @@ jobs:
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
 
     - name: root directory
-      run: ls/OutputFiles
+      run: ls OutputFiles
 
     - name: find CSV file
       run: find . -type f -name "*.csv"       
-      
-     
+           
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py
 
