@@ -77,6 +77,12 @@ jobs:
 
     - name: find CSV file
       run: find . -type f -name "*.csv" 
+      
+    - name: directory with csv?
+      run: ls ConsoleAppSVS-test/bin/Debug/net6.0
+
+    - name: root directory
+      run: ls
      
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py
