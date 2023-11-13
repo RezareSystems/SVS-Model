@@ -19,14 +19,12 @@ observed_data.sort_index(axis=0,inplace=True)
 
 tests = []
 test_name = []
-#something wrong with a path
-#find a way to a folder/it is weird as we have not changed anythong logically
 
-#for file in os.listdir(path+"\\OutputFiles"):
+for file in os.listdir(path+"\\OutputFiles"):
     
-    #if file.endswith('.csv'):
-        #tests.append(file)       
-        #test_name.append(os.path.splitext(file)[0])
+    if file.endswith('.csv'):
+        tests.append(file)       
+        test_name.append(os.path.splitext(file)[0])
 
 Alltests =[]
 for t in tests[:]:  

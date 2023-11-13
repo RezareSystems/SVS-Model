@@ -67,22 +67,21 @@ jobs:
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
       
     - name: run python 
-      run: python TestModel/testGraph/testGraph/testGraph.py     
+      run: python TestModel/testGraph/testGraph/testGraph.py
+
+    - name: find CSV file
+      run: find . -type f -name "*.csv"           
 
     - name: find index file
       run: find . -type f -name "*.html"
 
-    - name: find CSV file
-      run: find . -type f -name "*.csv"      
+ 
       
     - name: moving artfacts to temp folder
       run: |
         mv index.html graphs
         mv index.001.png graphs
-
-
-        
-              
+                  
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
