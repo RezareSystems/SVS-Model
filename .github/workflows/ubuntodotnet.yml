@@ -68,15 +68,21 @@ jobs:
       
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py     
-            
+
+    - name: find index file
+      run: find . -type f -name "*.html"
+
+    - name: find CSV file
+      run: find . -type f -name "*.csv"      
+      
     - name: moving artfacts to temp folder
       run: |
         mv index.html graphs
-        mv index.001.png graphs 
+        mv index.001.png graphs
+
+
         
-    - name: find index file
-      run: find . -type f -name "*.html"
-      
+              
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 

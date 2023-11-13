@@ -30,7 +30,7 @@ namespace TestModel
 {
     public class Test
     {
-/*        private static void runPythonScript()
+        private static void runPythonScript()
         {
             //that is new with james
             //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
@@ -47,7 +47,7 @@ namespace TestModel
             StreamReader sReader = proc.StandardOutput;
             proc.WaitForExit();
             Console.ReadLine();
-        }*/
+        }
         public static void RunTests(Dictionary<string, object> _configDict)
 
         {
@@ -157,16 +157,20 @@ namespace TestModel
                 if (!Directory.Exists(folderName) && !Directory.Exists(fertiliserFolder))
                 {
                     System.IO.Directory.CreateDirectory("OutputFiles");
+
                     System.IO.Directory.CreateDirectory("NitrogenApplied");
                 }
 
                 DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+
+                string fullPath = Path.GetFullPath(dir);
+                Trace.WriteLine(fullPath);
                 //DataFrame.SaveCsv(newDataframe, dir + "\\NitrogenApplied\\" + test + ".csv");
-                             
+
 
             }
             // uncomment it if run is on local machine
-            //runPythonScript();
+            runPythonScript();
 
         }      
         public static SVSModel.Configuration.Config SetConfigFromDataFrame(string test, DataFrame allTests)

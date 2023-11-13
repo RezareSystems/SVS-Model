@@ -8,10 +8,10 @@ import shutil
 path = os.getcwd()
 
 #run it on machine
-#observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
+observed_path = os.path.join(path, "../../../../TestModel/Observed/observed.csv")
 
 #run this code for an action
-observed_path = "TestModel/Observed/observed.csv"
+#observed_path = "TestModel/Observed/observed.csv"
 
 observed_data = pd.read_csv(observed_path,index_col=0)
 
@@ -19,11 +19,14 @@ observed_data.sort_index(axis=0,inplace=True)
 
 tests = []
 test_name = []
-for file in os.listdir(path+"\\OutputFiles"):
+#something wrong with a path
+#find a way to a folder/it is weird as we have not changed anythong logically
+
+#for file in os.listdir(path+"\\OutputFiles"):
     
-    if file.endswith('.csv'):
-        tests.append(file)       
-        test_name.append(os.path.splitext(file)[0])
+    #if file.endswith('.csv'):
+        #tests.append(file)       
+        #test_name.append(os.path.splitext(file)[0])
 
 Alltests =[]
 for t in tests[:]:  
