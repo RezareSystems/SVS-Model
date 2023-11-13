@@ -20,11 +20,19 @@ observed_data.sort_index(axis=0,inplace=True)
 tests = []
 test_name = []
 
-for file in os.listdir(path+"\\OutputFiles"):
+# run it on machine
+#for file in os.listdir(path+"\\OutputFiles"):
+    
+    #if file.endswith('.csv'):
+        #tests.append(file)       
+        #test_name.append(os.path.splitext(file)[0])
+
+for file in ("OutputFiles"):
     
     if file.endswith('.csv'):
         tests.append(file)       
         test_name.append(os.path.splitext(file)[0])
+
 
 Alltests =[]
 for t in tests[:]:  
