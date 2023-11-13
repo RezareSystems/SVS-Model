@@ -27,8 +27,8 @@ test_name = []
         #tests.append(file)       
         #test_name.append(os.path.splitext(file)[0])
 
-for file in ("OutputFiles"):
-    
+for file in ("ConsoleAppSVS-test\bin\Debug\net6.0\OutputFiles"):
+        
     if file.endswith('.csv'):
         tests.append(file)       
         test_name.append(os.path.splitext(file)[0])

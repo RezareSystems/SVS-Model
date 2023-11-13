@@ -158,10 +158,9 @@ namespace TestModel
                 {
                     System.IO.Directory.CreateDirectory("OutputFiles");
 
-                    System.IO.Directory.CreateDirectory("NitrogenApplied");
                 }
 
-                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");                
 
             }
             // uncomment it if run is on local machine
