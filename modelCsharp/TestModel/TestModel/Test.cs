@@ -30,7 +30,7 @@ namespace TestModel
 {
     public class Test
     {
-        private static void runPythonScript()
+        //private static void runPythonScript()
         {
             //that is new with james
             //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
@@ -162,11 +162,10 @@ namespace TestModel
 
                 DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
                 //DataFrame.SaveCsv(newDataframe, dir + "\\NitrogenApplied\\" + test + ".csv");
-                             
-
+                            
             }
             // uncomment it if run is on local machine
-            runPythonScript();
+            //runPythonScript();
 
         }      
         public static SVSModel.Configuration.Config SetConfigFromDataFrame(string test, DataFrame allTests)
