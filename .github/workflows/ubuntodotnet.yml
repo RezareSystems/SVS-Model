@@ -65,7 +65,13 @@ jobs:
       
     - name: find CSV file
       run: find . -type f -name "*.csv"       
-      
+
+    - name: root directory
+      run: ls
+
+    - name: root directory
+      run: ls ConsoleAppSVS-test/bin/Debug/net6.0
+   
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
 
