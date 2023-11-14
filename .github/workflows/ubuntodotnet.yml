@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: 'write'
-      pages: 'write'      
-      id-token: 'write'              
+      contents: write
+      pages: write     
+      id-token: write
+      deployments: write   
       
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
