@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       pages: write      
       id-token: write   
             
@@ -100,7 +100,9 @@ jobs:
                 
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2       
+      uses: actions/deploy-pages@v2
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}      
         
     - name: Override page_url
       id: change-page-url
