@@ -67,13 +67,7 @@ jobs:
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
       
     - name: ls
-      run: ls
-      
-    - name: ls
-      run: ls ConsoleApp1/bin/Debug/net6.0
-            
-    - name: ls
-      run: ls OutputFiles
+      run: ls                
             
     - name: find CSV file
       run: find . -type f -name "*.csv"       
