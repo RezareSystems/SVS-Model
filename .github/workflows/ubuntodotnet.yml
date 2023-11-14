@@ -97,6 +97,12 @@ jobs:
       uses: actions/upload-pages-artifact@v2
       with:
         path: ./modelCsharp/graphs 
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
                 
     - name: Deploy to GitHub Pages
       id: deployment
