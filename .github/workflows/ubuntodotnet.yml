@@ -25,7 +25,6 @@ jobs:
      
     environment:
       name: github-pages
-      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       url: ${{ steps.change-page-url.outputs.new_page_url }}    
     
     defaults:
