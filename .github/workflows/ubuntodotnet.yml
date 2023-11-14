@@ -15,13 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
-      pages: write      
-      id-token: write   
-            
-    concurrency:
-      group: "pages"
-      cancel-in-progress: true
+      contents: 'write'
+      pages: 'write'      
+      id-token: 'write'              
       
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
