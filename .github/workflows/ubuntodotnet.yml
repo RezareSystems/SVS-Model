@@ -15,14 +15,17 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       pages: write      
       id-token: write   
             
     concurrency:
       group: "pages"
-      cancel-in-progress: true      
-     
+      cancel-in-progress: true
+      
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      
     environment:
       name: github-pages
       url: ${{ steps.change-page-url.outputs.new_page_url }}    
