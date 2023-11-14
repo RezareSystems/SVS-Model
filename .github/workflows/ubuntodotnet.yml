@@ -66,18 +66,20 @@ jobs:
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
       
-    - name: root directory
-      run: ls -a
-
-    - name: root directory
-      run: ls -a OutputFiles
-
+    - name: ls
+      run: ls
+      
+    - name: ls
+      run: ls ConsoleApp1/bin/Debug/net6.0
+            
+    - name: ls
+      run: ls OutputFiles
+            
     - name: find CSV file
       run: find . -type f -name "*.csv"       
            
     - name: run python 
       run: python TestModel/testGraph/testGraph/testGraph.py
-
           
     - name: find index file
       run: find . -type f -name "*.html"
@@ -105,7 +107,9 @@ jobs:
     - name: Override page_url
       id: change-page-url
       run: echo "new_page_url=${{ steps.deployment.outputs.page_url }}index.html" >> $GITHUB_OUTPUT 
-    
-     
+        
+    - name: find index file
+      run: find . -type f -name "*.html"                       
 
-    
+    - name: find CSV file
+      run: find . -type f -name "*.csv"         

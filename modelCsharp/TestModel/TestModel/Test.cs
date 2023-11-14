@@ -160,7 +160,8 @@ namespace TestModel
 
                 }
 
-                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");                
+                //DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+                DataFrame.SaveCsv(newDataframe, test + ".csv");
 
             }
             // uncomment it if run is on local machine

@@ -27,8 +27,8 @@ test_name = []
         #tests.append(file)       
         #test_name.append(os.path.splitext(file)[0])
 
-for file in ("ConsoleAppSVS-test\bin\Debug\net6.0\OutputFiles"):
-        
+for file in os.listdir(path):
+    
     if file.endswith('.csv'):
         tests.append(file)       
         test_name.append(os.path.splitext(file)[0])
@@ -37,7 +37,7 @@ for file in ("ConsoleAppSVS-test\bin\Debug\net6.0\OutputFiles"):
 Alltests =[]
 for t in tests[:]:  
    
-    testframe = pd.read_csv(path + "\\OutputFiles\\"+t,index_col=0,dayfirst=True,date_format='%d/%m/%Y %H:%M:%S %p')  
+    testframe = pd.read_csv(t,index_col=0,dayfirst=True,date_format='%d/%m/%Y %H:%M:%S %p') 
     
     Alltests.append(testframe)   
 
