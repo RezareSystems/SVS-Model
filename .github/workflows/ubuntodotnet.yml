@@ -6,7 +6,7 @@ name: .NET
 on:
   push:
     branches: [ "master" ]
-  pull_request:
+  pull_request_target:
     branches: [ "master" ]
 
 jobs:
@@ -16,14 +16,12 @@ jobs:
 
     permissions:
       actions: write
-      contents: write
-      pages: write     
+      pages: write      
       id-token: write
-      deployments: write   
-      
-    # env:
-      # GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+      contents: write
+      pull-requests: write
+      deployments: write    
+            
     environment:
       name: github-pages
       url: ${{ steps.change-page-url.outputs.new_page_url }}    
@@ -67,18 +65,9 @@ jobs:
          
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
-      
-    - name: ls
-      run: ls                
-            
-    - name: find CSV file
-      run: find . -type f -name "*.csv"       
-           
+                     
     - name: run python 
-      run: python TestModel/testGraph/testGraph/testGraph.py
-          
-    - name: find index file
-      run: find . -type f -name "*.html"
+      run: python TestModel/testGraph/testGraph/testGraph.py         
      
     - name: moving artfacts to temp folder
       run: |
@@ -105,9 +94,4 @@ jobs:
     - name: Override page_url
       id: change-page-url
       run: echo "new_page_url=${{ steps.deployment.outputs.page_url }}index.html" >> $GITHUB_OUTPUT 
-        
-    - name: find index file
-      run: find . -type f -name "*.html"                       
-
-    - name: find CSV file
-      run: find . -type f -name "*.csv"         
+               
