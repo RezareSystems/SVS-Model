@@ -23,9 +23,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="example.csv" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="testGraph.py" />
   </ItemGroup>
   <ItemGroup>

@@ -12,47 +12,61 @@ using System.Data;
 using System;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text.Json.Serialization;
-//using ServiceStack;
-//using ServiceStack.Text;
 using System.Collections.Generic;
-//using Nancy.Routing.Constraints;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using Microsoft.Scripting;
 using static IronPython.Modules._ast;
 using System.IO;
+using CommandLine;
+using static IronPython.Modules.PythonDateTime;
+using System.Text.RegularExpressions;
+using System.Net.Http.Json;
+using Microsoft.VisualBasic;
+using static IronPython.SQLite.PythonSQLite;
+
 
 namespace TestModel
 {
     public class Test
     {
-        private static void runPythonScript()
+/*        private static void runPythonScript()
         {
+            //that is new with james
+            //string progToRun = dir + @"/../TestModel/testGraph/testGraph/testGraph.py";
             string dir = Directory.GetCurrentDirectory();
             string newPath = Path.GetFullPath(Path.Combine(dir, @"..\..\..\..\"));
-            string progToRun = newPath+ @"TestModel\testGraph\testGraph\testGraph.py";    
-            
+            string progToRun = newPath + @"TestModel\testGraph\testGraph\testGraph.py";
+
             Process proc = new Process();
             proc.StartInfo.FileName = "python.exe";
             proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.UseShellExecute = false;  
-            proc.StartInfo.Arguments =progToRun;
+            proc.StartInfo.UseShellExecute = false;
+            proc.StartInfo.Arguments = progToRun;
             proc.Start();
             StreamReader sReader = proc.StandardOutput;
             proc.WaitForExit();
             Console.ReadLine();
-
-        }
+        }*/
         public static void RunTests(Dictionary<string, object> _configDict)
 
         {
             string dir = Directory.GetCurrentDirectory();
-            //DataFrame testConfigs = Crop.LoadCoefficients("SVSModel.Data.TestConfig.csv");
+            string resourceName = "TestModel.actualDataConfig.csv";
 
-            string resourceName = "TestModel.TestConfig.csv";
+            // new line
+            string resourceFertiliser = "TestModel.FertiliserData.csv";
+
             var assembly = Assembly.GetExecutingAssembly();
             Stream csv = assembly.GetManifestResourceStream(resourceName);
+
+            //new line
+            Stream csvFertiliser = assembly.GetManifestResourceStream(resourceFertiliser);
+
             DataFrame allTests = DataFrame.LoadCsv(csv);
+
+            //new line
+            DataFrame fertiliser = DataFrame.LoadCsv(csvFertiliser);
 
             List<string> Tests = new List<string>();
 
@@ -69,6 +83,40 @@ namespace TestModel
 
                 Dictionary<DateTime, double> testResults = new Dictionary<DateTime, double>();
                 Dictionary<DateTime, double> nApplied = new Dictionary<DateTime, double>();
+               
+                int siteNumber = Int32.Parse(Regex.Match(test, @"\d+").Value);
+
+                foreach (DataFrameRow row in fertiliser.Rows)
+                {
+
+                    int firstElement = Int32.Parse(row[0].ToString());
+                    
+                    DateTime fertDate = Convert.ToDateTime(row[1].ToString());
+
+                    if (firstElement == siteNumber)
+
+                        if ((fertDate > _config.Current.EstablishDate) && (fertDate <= _config.Current.HarvestDate))
+
+                            try
+                            {
+
+                                if (!nApplied.ContainsKey((DateTime)row[1]))
+                                { 
+                                    nApplied.Add(fertDate, (Single)row[2]);                              
+                                }
+                                else
+                                {
+                                    nApplied[fertDate]+= (Single)row[2];
+                                }
+                                
+                            }
+                            
+                            catch (Exception e)
+                            {
+                                Trace.WriteLine(e+"something is not working properly in fertiliser department");
+
+                            }
+                }
 
                 string weatherStation = allTests["WeatherStation"][testRow].ToString();
              
@@ -102,14 +150,24 @@ namespace TestModel
                     }
                     newDataframe.Append(nextRow, true);
                 }
+                string folderName = "OutputFiles";
 
-                DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");               
+                string fertiliserFolder = "NitrogenApplied";
+
+                if (!Directory.Exists(folderName) && !Directory.Exists(fertiliserFolder))
+                {
+                    System.IO.Directory.CreateDirectory("OutputFiles");
+
+                }
+
+                //DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+                DataFrame.SaveCsv(newDataframe, test + ".csv");
 
             }
-            runPythonScript();
+            // uncomment it if run is on local machine
+            //runPythonScript();
 
         }      
-
         public static SVSModel.Configuration.Config SetConfigFromDataFrame(string test, DataFrame allTests)
         {
             int testRow = getTestRow(test, allTests);
@@ -184,7 +242,6 @@ namespace TestModel
 
             return ret;
         }
-
         private static int getTestRow(string test, DataFrame allTests)
         {
             int testRow = 0;
