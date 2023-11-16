@@ -153,14 +153,18 @@ namespace TestModel
                 string folderName = "OutputFiles";
 
                 string fertiliserFolder = "NitrogenApplied";
-
+                
                 if (!Directory.Exists(folderName) && !Directory.Exists(fertiliserFolder))
                 {
                     System.IO.Directory.CreateDirectory("OutputFiles");
+                    System.IO.Directory.CreateDirectory("NitrogenApplied");
 
                 }
 
+                // on local machine
                 //DataFrame.SaveCsv(newDataframe, dir + "\\OutputFiles\\" + test + ".csv");
+
+                //for an action
                 DataFrame.SaveCsv(newDataframe, test + ".csv");
 
             }
