@@ -3,7 +3,17 @@
 
 name: .NET
 
-on: pull_request_target
+#on: pull_request_target
+
+on:
+  push:
+    branches:
+      - main
+  pull_request_target:
+    branches:
+      - main
+      
+      
 
 jobs:
   build:
