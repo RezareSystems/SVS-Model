@@ -8,8 +8,6 @@ name: .NET
 on:
   pull_request_target:
     branches: [ "TestRuns" ]
-           
-jobs:
 
     - name: GIT commit and push docs
       env: 
@@ -20,7 +18,10 @@ jobs:
         git config --global user.email "username@users.noreply.github.com"
         git add docs
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-        git push
+        git push TestRuns  
+
+ 
+jobs:
 
   build:
   
@@ -48,10 +49,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    
-
-
-
     
     - name: Install Python 3
       uses: actions/setup-python@v1
