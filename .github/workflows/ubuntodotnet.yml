@@ -6,8 +6,6 @@ name: .NET
 #on: pull_request_target
 
 on:
-  push:
-    branches: [ "TestRuns" ]
   pull_request_target:
     branches: [ "TestRuns" ]
            
