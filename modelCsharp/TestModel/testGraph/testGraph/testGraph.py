@@ -112,7 +112,7 @@ for t in tests:
     makeplot(Data,color)
     make_observed(observed_data[datefilter])
     Graph.tight_layout(pad=1.5)
-    Graph.suptitle('DRAFT VERSION',fontsize = 32, color = "r")
+    Graph.suptitle('DRAFT VERSION',fontsize = 32, color = "b")
     
     pos+=1
     
