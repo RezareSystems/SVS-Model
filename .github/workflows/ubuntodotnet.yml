@@ -60,7 +60,11 @@ jobs:
       run: dotnet build --no-restore
       
     - name: ls
-      run: ls -a     
+      run: ls -a
+
+
+
+      
       
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
