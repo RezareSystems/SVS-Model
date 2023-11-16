@@ -7,13 +7,10 @@ name: .NET
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "TestRuns" ]
   pull_request_target:
-    branches:
-      - main
-      
-      
+    branches: [ "TestRuns" ]
+           
 
 jobs:
   build:
