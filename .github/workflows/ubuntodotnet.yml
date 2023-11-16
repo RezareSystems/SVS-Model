@@ -58,7 +58,10 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore
-         
+      
+    - name: ls
+      run: ls -a     
+      
     - name: run
       run: dotnet run --project ConsoleAppSVS-test/ConsoleAppSVS-test.csproj
                      
@@ -90,11 +93,3 @@ jobs:
     - name: Override page_url
       id: change-page-url
       run: echo "new_page_url=${{ steps.deployment.outputs.page_url }}index.html" >> $GITHUB_OUTPUT
-
-    - name: ls
-      run: ls -a
-
-
-
-    
-               
