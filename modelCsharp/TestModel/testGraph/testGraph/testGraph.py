@@ -35,11 +35,11 @@ test_name = []
         #test_name.append(os.path.splitext(file)[0])
 
 #uncomment it for an Action
-#for file in os.listdir(path):
+for file in os.listdir(path):
     
-    #if file.endswith('.csv'):
-        #tests.append(file)       
-        #test_name.append(os.path.splitext(file)[0])
+    if file.endswith('.csv'):
+        tests.append(file)       
+        test_name.append(os.path.splitext(file)[0])
 
 Alltests =[]
 for t in tests[:]:  
