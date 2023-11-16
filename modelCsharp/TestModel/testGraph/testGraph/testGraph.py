@@ -135,7 +135,6 @@ doc.save("index.html")
 plt.show()
 
 
-
 #shutil.rmtree(path+"\\OutputFiles")
 #shutil.rmtree(path+"\\NitrogenApplied")
 
