@@ -26,6 +26,9 @@ namespace SVSModel
         {
             DateTime[] simDates = Functions.DateSeries(config.Prior.HarvestDate.AddDays(-1), config.Following.HarvestDate);
 
+            //Apply inCropRainfallFactor to Rain
+            meanRain = Functions.ApplyRainfallFactor(meanRain, config);
+
             //Run crop model for each crop in rotation to calculate CropN (total standing in in crop) and Nuptake (Daily N removal from the soil by the crop)
             Dictionary<DateTime, double> NUptake = Functions.dictMaker(simDates, new double[simDates.Length]);
             Dictionary<DateTime, double> CropN = Functions.dictMaker(simDates, new double[simDates.Length]);

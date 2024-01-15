@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using SVSModel.Configuration;
+using ExcelDna.Integration;
+using System.Diagnostics;
+using System.Linq;
+using SVSModel.Models;
 
 namespace SVSModel.Excel
 {
@@ -13,7 +17,7 @@ namespace SVSModel.Excel
         object[,] GetCropCoefficients();
     }
 
-    public class MyFunctions : IMyFunctions
+    public static class MyFunctions //: IMyFunctions
     {
         /// <summary>
         /// Function that takes input data in 2D array format and calculates a N balance for a 3 crops rotation and returns N balance variables in 2D array format
@@ -22,7 +26,8 @@ namespace SVSModel.Excel
         /// <param name="config">2D array with parameter names and values for crop field configuration parameters</param>
         /// <param name="testResults">2D array with dates in teh first column and soil N test results in the second</param>
         /// <returns>Dictionary with parameter names as keys and parameter values as values</returns>
-        public object[,] GetDailyNBalance(object[,] met, object[,] config, object[,] testResults, object[,] nApplied)
+        [ExcelFunction(Description = "Returns full N balance results")]
+        public static object[,] GetDailyNBalance(object[,] met, object[,] config, object[,] testResults, object[,] nApplied)
         {
             List<string> configErrors = Functions.ValidateConfig(config);
 
@@ -44,6 +49,7 @@ namespace SVSModel.Excel
                 Dictionary<DateTime, double> _testResults = Functions.dictMaker(testResults, "Value");
                 Dictionary<DateTime, double> _nApplied = Functions.dictMaker(nApplied, "Amount");
                 var _config = new Config(Functions.dictMaker(config));
+
                 return Simulation.SimulateField(_tt, _rain, _pet, _testResults, _nApplied, _config);
             }
             else
@@ -65,7 +71,8 @@ namespace SVSModel.Excel
         /// <param name="Tt">Array of daily thermal time over the duration of the crop</param>
         /// <param name="Config">2D aray with parameter names and values for crop configuration parameters</param>
         /// <returns>Dictionary with parameter names as keys and parameter values as values</returns>
-        public object[,] GetDailyCropData(double[] Tt, object[,] Config)
+        [ExcelFunction(Description = "Returns crop model predictions")]
+        public static object[,] GetDailyCropData(double[] Tt, object[,] Config)
         {
             Dictionary<string, object> c = Functions.dictMaker(Config);
             CropConfig config = new CropConfig(c, "Current");
@@ -75,9 +82,11 @@ namespace SVSModel.Excel
             return Crop.Grow(AccTt, config);
         }
 
-        public object[,] GetCropCoefficients()
+        [ExcelFunction(Description = "Gets crop coefficient table")]
+        public static object[,] GetCropCoefficients()
         {
-            return Functions.packDataFrame(SVSModel.Crop.LoadCropCoefficients());
+            return Functions.packDataFrame(Crop.LoadCropCoefficients());
         }
+       
     }
 }

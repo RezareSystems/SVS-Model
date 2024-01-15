@@ -258,5 +258,19 @@ namespace SVSModel.Configuration
 
             return Double.Parse(configDouble.ToString());
         }
+
+        public static Dictionary<DateTime, double> ApplyRainfallFactor(Dictionary<DateTime, double> meanRain, Config config)
+        {
+            Dictionary<DateTime, double> adjustedmeanRain =  new Dictionary<DateTime, double>();
+
+            foreach (DateTime d in meanRain.Keys) 
+            { 
+                double todayRain = meanRain[d];
+                if ((d>= config.Current.EstablishDate) && (d<= config.Current.HarvestDate))
+                    todayRain *= config.Field.InCropRainFactor;
+                adjustedmeanRain.Add(d, todayRain);
+            }
+            return adjustedmeanRain;
+        }
     }
 }

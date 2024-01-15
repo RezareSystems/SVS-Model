@@ -48,7 +48,7 @@ namespace SVSModel.Configuration
             Splits = int.Parse(c["Splits"].ToString());
             AWC = Functions.Num(c["AWC"]);
             PrePlantRainFactor = Constants.RainFactors[c["PrePlantRain"].ToString()];
-            InCropRainFactor = Constants.RainFactors[c["PrePlantRain"].ToString()];
+            InCropRainFactor = Constants.RainFactors[c["InCropRain"].ToString()];
             IrrigationRefill = Constants.IrrigationRefill[c["Irrigation"].ToString()];
             IrrigationTrigger = Constants.IrrigationTriggers[c["Irrigation"].ToString()];
         }

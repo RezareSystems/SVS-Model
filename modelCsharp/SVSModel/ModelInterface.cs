@@ -22,7 +22,6 @@ namespace SVSModel
         /// <param name="config">Model config object, all parameters are required</param>
         /// <returns>A list of <see cref="DailyNBalance"/> objects</returns>
         List<DailyNBalance> GetDailyNBalance(string weatherStation, Dictionary<DateTime, double> testResults, Dictionary<DateTime, double> nApplied, Config config);
-
         /// <summary>
         /// Gets the crop data from the data file
         /// </summary>
@@ -108,7 +107,7 @@ namespace SVSModel
             }
         }
 
-        private static MetDataDictionaries BuildMetDataDictionaries(DateTime startDate, DateTime endDate, string weatherStation)
+        public static MetDataDictionaries BuildMetDataDictionaries(DateTime startDate, DateTime endDate, string weatherStation)
         {
             var metData = GetMetData(weatherStation).ToList();
 
@@ -128,7 +127,7 @@ namespace SVSModel
 
                 currDate = currDate.AddDays(1);
             }
-
+            
             return new MetDataDictionaries { MeanT = meanT, Rain = rain, MeanPET = meanPET };
         }
 
