@@ -39,7 +39,7 @@ namespace SVSModel.Models
         public static readonly string SoilTexture = "Clay";
         public static readonly string SampleDepth = "0-30cm";
         public static readonly double BulkDensity = 1.22;
-        public static readonly string PMNtype = "PMN";
+        public static readonly string PMNtype = "HWEON";
         public static readonly double PMN = 60;
         public static readonly int Splits = 1;
         public static readonly string RainPrior = "Typical";
