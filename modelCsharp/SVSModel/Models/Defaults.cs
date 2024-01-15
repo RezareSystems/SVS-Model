@@ -38,7 +38,7 @@ namespace SVSModel.Models
         public static readonly string SoilOrder = "Brown";
         public static readonly string SampleDepth = "0-30cm";
         public static readonly double BulkDensity = 1.22;
-        public static readonly string PMNtype = "PWN";
+        public static readonly string PMNtype = "HWEON";
         public static readonly double PMN = 60;
         public static readonly int Splits = 1;
         public static readonly string RainPrior = "Typical";
