@@ -1,0 +1,10 @@
+﻿Inputfield,Potato,Wheat,Oat,Carrot,Trunip
+EstabDate,15-Oct,15-Apr,1-Mar,1-Sep,1-Mar
+EstabStage,Seed,Seed,Seed,Seed,Seed
+PlantDepth,150,20,20,10,10
+HarvestDate,31-Mar,15-Feb,15-Aug,15-Feb,15-Aug
+TtHarvest,,,,,
+HarvestStage,Maturity,Ripe,EarlyReproductive,Vegetative,Vegetative
+ExpectedYield,70,12,10,80,10
+FieldLoss,0.05,0,0,0.05,0
+ResidueRemoval,0,0.8,0,0,0
