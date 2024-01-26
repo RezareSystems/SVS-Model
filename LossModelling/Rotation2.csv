@@ -1,0 +1,13 @@
+Inputfield,Broccoli,Cabbage,Peas,SilverBeat,LetticeIceBurg,PakChoi,LetticeFancy
+CropName,Broccoli,Cabbage,Peas,SilverBeat,LetticeIceBurg,PakChoi,LetticeFancy
+EstablishDate,15-Sep,10-Jan,15-Sep,10-Jan,15-Sep,15-Dec,1-Mar
+EstablishStage,Seedling,Seedling,Seed,Seedling,Seedling,Seedling,Seedling
+PlantingDepth,20,20,20,20,20,20,20
+HarvestDate,15-Dec,15-May,15-Dec,30-Apr,1-Dec,15-Feb,15-May
+TtEstabToHarv,,,,,,,
+HarvestStage,EarlyReproductive,EarlyReproductive,LateReproductive,Vegetative,Vegetative,Vegetative,Vegetative
+ExpectedYield,20,50,5,40,30,30,30
+FieldLoss,0.3,0.15,0,0.15,0.2,0.25,0.2
+ResidueRemoval,0,0,0,0,0,0,0
+IsFertilised,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
+FirstFertDate,15-Sep,10-Jan,15-Dec,10-Jan,15-Sep,15-Dec,15-May

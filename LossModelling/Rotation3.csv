@@ -1,0 +1,13 @@
+Inputfield,Broccoli,Cabbage,OatForage1,Peas,SilverBeat,OatForage2,LetticeIceBurg,PakChoi,LetticeFancy,OatForage3
+CropName,Broccoli,Cabbage,OatForage,Peas,SilverBeat,OatForage,LetticeIceBurg,PakChoi,LetticeFancy,OatForage
+EstablishDate,15-Sep,10-Jan,20-May,15-Sep,10-Jan,10-May,15-Sep,15-Dec,1-Mar,20-May
+EstablishStage,Seedling,Seedling,Seed,Seed,Seedling,Seed,Seedling,Seedling,Seedling,Seed
+PlantingDepth,20,20,20,20,20,20,20,20,20,20
+HarvestDate,15-Dec,15-May,10-Sep,15-Dec,30-Apr,10-Sep,1-Dec,15-Feb,15-May,10-Sep
+TtEstabToHarv,,,,,,,,,,
+HarvestStage,EarlyReproductive,EarlyReproductive,Vegetative,LateReproductive,Vegetative,Vegetative,Vegetative,Vegetative,Vegetative,Vegetative
+ExpectedYield,20,50,7,5,40,9,30,30,30,7
+FieldLoss,0.3,0.15,0,0,0.15,0,0.2,0.25,0.2,0
+ResidueRemoval,0,0,0,0,0,0,0,0,0,0
+IsFertilised,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+FirstFertDate,15-Sep,10-Jan,10-Sep,15-Dec,10-Jan,10-Sep,15-Sep,15-Dec,15-May,10-Sep
