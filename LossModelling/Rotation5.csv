@@ -1,0 +1,13 @@
+Inputfield,Potato,OatForage1,Carrot,OatForage2,SweetCorn,Onion,Wheat
+CropName,Potato,OatForage,Carrot,OatForage,SweetCorn,Onion,Wheat
+EstablishDate,15-Oct,15-Apr,15-Sep,25-Apr,15-Oct,1-May,1-Apr
+EstablishStage,Seed,Seed,Seed,Seed,Seed,Seed,Seed
+PlantingDepth,20,15,10,15,10,10,20
+HarvestDate,31-Mar,15-Aug,15-Apr,15-Aug,15-Feb,1-Dec,1-Jan
+TtEstabToHarv,,,,,,,
+HarvestStage,Maturity,Vegetative,LateReproductive,Vegetative,LateReproductive,Maturity,Maturity
+ExpectedYield,60,9,90,9,15,60,14
+FieldLoss,0.05,0,0.05,0,0.05,0.05,0
+ResidueRemoval,0,0,0,0,0,0,0
+IsFertilised,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE
+FirstFertDate,15-Oct,15-Aug,15-Sep,15-Aug,15-Oct,1-May,15-Aug

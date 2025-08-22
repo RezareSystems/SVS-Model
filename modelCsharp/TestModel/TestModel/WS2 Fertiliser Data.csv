@@ -1,0 +1,117 @@
+Fertiliser,,,,,,,,,
+Site,Date,Crop ID,Fertiliser type,Fert/Lime,N:P:K:S,% N,Rate (kg/ha),Total N (kg/ha),Form of fert/lime
+2,21/10/2020,2Bar-A,SustaiN,Fert,45.9-0-0-0,46%,200,91.8,UreaUI
+2,12/03/2021,Fallow,Compost,Fert,,0%,10000,0,
+2,12/03/2021,Fallow,Gypsum,Lime,,,2000,0,
+4,29/09/2020,4Pot-A,Potassium Sulphate,Fert,,0%,248.5,0,
+4,29/09/2020,4Pot-A,CalMag,Fert,,0%,106.5,0,
+4,1/10/2020,4Pot-A,Grower Waikato Mix,Fert,,9%,1600,144,NonUrea
+4,18/11/2020,4Pot-A,Yara Advance,Fert,12.4-5.4-15-8,12%,511,63.364,NonUrea
+4,24/12/2020,4Pot-A,CAN,Fert,26-0-0-0,26%,300,78,NonUrea
+1,28/02/2021,Fallow,Lime,Lime,,,4000,0,Limestone
+1,28/02/2021,Fallow,Lime,Lime,,,2000,0,Limestone
+7,12/12/2020,7BS-A,14:10:8:4 blend,Fert,14-10-8-4,14%,200,28,NonUrea
+4,23/03/2021,4Caul-A,Yarra Complex,Fert,12-5-15-0,12%,980,117.6,NonUrea
+3,7/07/2021,3Car-A,Rustica (Blue) 12:5:14,Fert,12-5-14,12%,200,24,NonUrea
+3,4/08/2021,3Car-A,Rustica (Blue) 12:5:14,Fert,12-5-14,12%,150,18,NonUrea
+3,1/10/2019,3Pot-A,8:8:*,Fert,8-8-2008,8%,2500,200,NonUrea
+3,5/12/2019,3Pot-A,Rustica (Blue) 12:5:14,Fert,12-5-14,12%,150,18,NonUrea
+6,22/12/2020,6Maize-A,N Protect,Fert,46-0-0-0,46%,221,101.439,UreaUI
+6,17/12/2020,6Maize-A,Kiersite,Fert,0-0-0-20,0%,300,0,
+9,27/10/2020,9Pum-A,AG lime,Lime,,0%,4000,0,
+9,29/10/2020,9Pum-A,Dolomite lime,Lime,,0%,1000,0,
+9,10/11/2020,9Pum-A,SOP,Fert,0-0-42-18,0%,250,0,
+9,20/11/2020,9Pum-A,Cropmaster 20,Fert,17.6-20-0-1,18%,220,38.72,NonUrea
+9,16/12/2020,9Pum-A,CAN,Fert,27-0-0-0,27%,100,27,NonUrea
+8,9/03/2020,Fallow,AgLime,Lime,,,2500,0,
+8,10/03/2020,Fallow,Cattle Manure (dry matter),Fert,,,8657,0,
+8,9/09/2020,8Pot-A,Kieserite Granular,Fert,0-0-0-20,0%,120,0,
+8,9/09/2020,8Pot-A,Potassium Sulphate (SOP),Fert,0-0-42-17,0%,625,0,
+8,24/09/2020,8Pot-A,Blotta,,,,3,0,
+8,24/09/2020,8Pot-A,n-rich urea,Fert,46-0-0-0,46%,100,46,Urea
+8,24/09/2020,8Pot-A,Redox Ammonium Phosphate Liquid (11-34P2O5-0),Fert,11-34P2O5-0,11%,200,22,NonUrea
+8,15/11/2020,8Pot-A,Blotta,,,,2,0,
+8,15/11/2020,8Pot-A,Redox Ammonium Phosphate Liquid (11-34P2O5-0),Fert,11-34P2O5-0,11%,200,22,NonUrea
+8,15/11/2020,8Pot-A,Urea Ammonium Nitrate (UAN),Fert,32-0-0-0,32%,50,16,Urea
+8,21/11/2020,8Pot-A,Rustica hi K,Fert,12-3-20-6,12%,200,24,NonUrea
+8,20/11/2020,8Pot-A,Lono Potato 15-0-0 (7.6),Fert,15-0-0-0,15%,5,0.75,NonUrea
+8,24/11/2020,8Pot-A,Urea Ammonium Nitrate (UAN),Fert,32-0-0-0,32%,104,33.28,Urea
+8,26/11/2020,8Pot-A,YaraBela CAN,Fert,27-0-0-0,27%,200,54,
+8,26/11/2020,8Pot-A,Coda-Mg-L,,,,1,0,
+8,26/11/2020,8Pot-A,Lono Potato 15-0-0 (7.6),,15-0-0-0,15%,5,0.75,NonUrea
+8,1/12/2020,8Pot-A,Rustica hi K,Fert,12-3-20-6,12%,200,24,NonUrea
+8,4/12/2020,8Pot-A,Urea Ammonium Nitrate (UAN),Fert,32-0-0-0,32%,100,32,Urea
+8,5/12/2020,8Pot-A,Kelp,,,,3,0,
+8,4/12/2020,8Pot-A,Ballance - Muriate of Potash (MOP),Fert,0-0-50-0,0%,100,0,
+8,12/12/2020,8Pot-A,Urea Ammonium Nitrate (UAN),Fert,32-0-0-0,32%,120,38.4,Urea
+8,12/12/2020,8Pot-A,Bio Marinus Biological Liquid Fish Fertiliser,,,,2,0,
+8,12/12/2020,8Pot-A,Lono Potato 15-0-0 (7.6),Fert,15-0-0-0,15%,5,0.75,NonUrea
+8,28/12/2020,8Pot-A,Coda-Cu-L,,,,1,0,
+8,28/12/2020,8Pot-A,Damu,,,,1,0,
+8,19/12/2020,8Pot-A,Bio Marinus Biological Liquid Fish Fertiliser,,,,1.5,0,
+8,19/12/2020,8Pot-A,Damu,,,,1,0,
+8,19/12/2020,8Pot-A,Lono Potato 15-0-0 (7.6),Fert,15-0-0-0,,5,0,
+8,14/01/2021,8Pot-A,Damu,Fert,,,1.5,0,
+8,30/01/2021,8Pot-A,Damu,Fert,,,5,0,
+5,4/11/2020,5Pot-A,Hydro Complex,Fert,12-5-15,12%,1500,180,NonUrea
+5,28/01/2021,5Pot-A,Hydro Complex,Fert,12-5-15,12%,200,24,NonUrea
+1,27/06/2021,1Oni-A,Base,Fert,7-0-0-13.5,7%,470,32.9,NonUrea
+1,11/08/2021,1Oni-A,Cropzeal Boron Boost,Fert,16.5-19.5-0-0,17%,200,33,NonUrea
+1,12/09/2021,1Oni-A,Sustain,Fert,46-0-0-0,46%,85,39.1,UreaUI
+1,15/10/2021,1Oni-A,Complex,Fert,12-5-15-8,12%,250,30,NonUrea
+1,25/11/2021,1Oni-A,Sustain,Fert,46-0-0-0,46%,85,39.1,UreaUI
+7,5/04/2021,7Gra-A,DAP,Fert,18-20,18%,100,18,NonUrea
+7,12/12/2021,7BS-B,14:10:8:4 blend,Fert,14-10-8-4,14%,200,28,NonUrea
+8,21/04/2021,8Wheat-A,CalSap,Fert,0-0-0-0,,6,0,
+8,21/04/2021,8Wheat-A,Kelp,Fert,,,5,0,
+8,21/04/2021,8Wheat-A,Magnesium Sulphate,Fert,0-0-0-13,,5,0,
+8,21/04/2021,8Wheat-A,Manganese Sulphate,Fert,0-0-0-18,,1.5,0,
+8,21/04/2021,8Wheat-A,Potassium Sulphate (SOP),Fert,0-0-42-18,,6,0,
+8,21/04/2021,8Wheat-A,Urea Ammonium Nitrate (UAN),Fert,42-0-0-0,42%,20,8.4,Urea
+8,3/07/2021,8Wheat-A,Balance - zinc sulphate,Fert,0-0-0-0,,1,0,
+8,3/07/2021,8Wheat-A,Manganese Sulphate,Fert,0-0-0-18,,5,0,
+8,3/07/2021,8Wheat-A,Potassium Sulphate (SOP),Fert,0-0-42-18,,5,0,
+8,3/07/2021,8Wheat-A,Urea Ammonium Nitrate (UAN),Fert,42-0-0-0,42%,10,4.2,Urea
+8,10/09/2021,8Wheat-A,n-rich liquid urea 19N,Fert,19-0-0-0,19%,400,76,Urea
+8,15/09/2021,8Wheat-A,Balance - zinc sulphate,Fert,0-0-0-0,,1,0,
+8,15/09/2021,8Wheat-A,Manganese Sulphate,Fert,0-0-0-18,,2,0,
+8,15/09/2021,8Wheat-A,Potassium Sulphate (SOP),Fert,0-0-42-18,,1,0,
+8,20/09/2021,8Wheat-A,Codabor,Fert,0-0-0-0,,0.7,0,
+8,20/09/2021,8Wheat-A,Coda-cCu-L,Fert,0-0-0-0,,1,0,
+8,26/09/2021,8Wheat-A,n-rich liquid urea 19N,Fert,19-0-0-0,19%,400,76,Urea
+8,11/10/2021,8Wheat-A,n-rich liquid urea 19N,Fert,19-0-0-0,19%,400,76,Urea
+9,1/11/2021,9Gra-A,Urea,Fert,46-0-0-0,46%,160,73.6,Urea
+9,3/12/2021,9Gra-A,Urea,Fert,46-0-0-0,46%,180,82.8,Urea
+5,10/10/2021,5Oni-A,Hydro Complex,Fert,12-5-15,12%,300,36,NonUrea
+5,6/11/2021,5Oni-A,Hydro Complex,Fert,12-5-15,12%,300,36,NonUrea
+5,25/11/2021,5Oni-A,Hydro Complex,Fert,12-5-15,12%,300,36,NonUrea
+4,21/10/2021,4Maize-A,Yara Actyva,Fert,15-7-12.5-3-1.2,15%,350,52.5,NonUrea
+4,30/11/2021,4Maize-A,SustaiN,Fert,46-0-0-0,46%,400,184,UreaUI
+2,12/08/2021,2Oni-A,Hydro Complex,Fert,12:05:15,12%,250,30,NonUrea
+2,21/09/2021,2Oni-A,Hydro Compex,Fert,12:05:15,12%,250,30,NonUrea
+2,21/10/2021,2Oni-A,Actyva,Fert,07:12.5,7%,275,19.25,NonUrea
+2,26/11/2021,2Oni-A,Complex,Fert,12:05:15,12%,300,36,NonUrea
+2,11/12/2021,2Oni-A,CAN,Fert,27,27%,125,33.75,NonUrea
+2,3/04/2022,2Cauli-A,Winter green,Fert,14:05:08,14%,900,126,NonUrea
+WP,7/10/2022,WP,Sustain,Fert,46:0:0:0,46%,75,34.5,UreaUI
+WP,23/09/2022,WP,CAN,Fert,27-0-0-0,27%,200,54,NonUrea
+WP,24/08/2022,WP,Sustain,Fert,46-0-0-0,46%,70,32.2,UreaUI
+WP,23/06/2022,WP,8-11-20,Fert,8-11-20-0,8%,1000,80,NonUrea
+WP,15/07/2021,WP,SOA,Fert,20.5-0-0-22,11%,200,22,NonUrea
+2,22/12/2022,2Pot-B,Hydro Complex,Fert,12-5-15,12%,1200,144,NonUrea
+2,1/05/2022,2Cauli-A,CAN,Fert,27-0-0-0,27%,200,54,NonUrea
+8,29/09/2022,8Pea-A,CalSap,Fert,0:0:20:2,0%,3,0,NonUrea
+8,29/09/2022,8Pea-A,Image Holdings - Sodium Molybdate,Fert,0:0:0:0,0%,0.05,0,NonUrea
+8,29/09/2022,8Pea-A,Kelp,Fert,5:6:19:0,5%,2.5,0.125,NonUrea
+8,29/09/2022,8Pea-A,Micro Phos,Fert,0:10:0:0,0%,4,0,NonUrea
+8,29/09/2022,8Pea-A,N.U.E.,Fert,0:0:0:0,0%,0.015,0,NonUrea
+8,29/09/2022,8Pea-A,Potassium Sulphate (SOP),Fert,0:0:42:18,0%,2.5,0,NonUrea
+8,29/09/2022,8Pea-A,Urea Ammonium Nitrate (UAN),Fert,42:0:0:0,42%,1.5,0.63,NonUrea
+8,29/09/2022,8Pea-A,X14,Fert,0:0:0:0,0%,12.5,0,NonUrea
+8,29/09/2022,8Pea-A,Zinc Sulphate (Powder),Fert,0:0:0:0,0%,1,0,NonUrea
+8,30/11/2022,8Pea-A,CalSap,Fert,0:0:20:2,0%,4,0,NonUrea
+8,30/11/2022,8Pea-A,Image Holdings - Potassium Nitrate,Fert,13.5:0:38:0,13%,3,0.39,NonUrea
+8,30/11/2022,8Pea-A,Kelp,Fert,5:6:19:0,5%,2,0.1,NonUrea
+9,18/11/2022,9Broc-A,Dolomite,Lime,,0%,1000,0,Dolomite
+9,27/12/2022,9Broc-A,Nitrophoska Extra,Fert,12:5:14:8,12%,700,84,NonUrea
+9,30/01/2023,9Broc-A,Nitrophoska Extra,Fert,12:5:14:8,12%,750,90,NonUrea

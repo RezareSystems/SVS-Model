@@ -1,0 +1,13 @@
+Inputfield,Potato,Carrot,SweetCorn,Onion,Wheat
+CropName,Potato,Carrot,SweetCorn,Onion,Wheat
+EstablishDate,15-Oct,15-Sep,15-Oct,1-May,1-Jun
+EstablishStage,Seed,Seed,Seed,Seed,Seed
+PlantingDepth,20,10,10,10,20
+HarvestDate,31-Mar,15-Apr,15-Feb,1-Dec,1-Jan
+TtEstabToHarv,,,,,
+HarvestStage,Maturity,LateReproductive,LateReproductive,Maturity,Maturity
+ExpectedYield,60,90,15,60,12
+FieldLoss,0.05,0.05,0.05,0.05,0
+ResidueRemoval,0,0,0,0,0
+IsFertilised,TRUE,TRUE,TRUE,TRUE,TRUE
+FirstFertDate,15-Oct,15-Sep,15-Oct,1-May,1-Jun
